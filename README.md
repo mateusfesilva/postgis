@@ -5,6 +5,7 @@
 ---
 
 <a name="english"></a>
+## 🇺🇸 English
 
 This is a REST API for vector data management, developed to demonstrate the integration between **Python (FastAPI)** and spatial databases (**PostGIS**).
 
@@ -24,10 +25,12 @@ This is a REST API for vector data management, developed to demonstrate the inte
 ### OpenAPI Documentation
 ![Swagger Documentation](./assets/swagger-ui.png)
 
-### lat-lon Convert (to test)
-https://www.latlong.net/convert-address-to-lat-long.html
+## Coordinates Reference
+To get coordinates for testing, you can use: [LatLong.net Converter](https://www.latlong.net/convert-address-to-lat-long.html)
+
 
 <a name="português"></a>
+🇧🇷 Português
 
 Este projeto é uma API REST em andamento para gerenciamento de dados vetoriais, desenvolvida para demonstrar a integração entre **Python (FastAPI)** e bancos de dados espaciais (**PostGIS**). Atualmente, somente geometria de pontos são suportadas.
 
@@ -44,3 +47,5 @@ Este projeto é uma API REST em andamento para gerenciamento de dados vetoriais,
    ```bash
    docker compose up -d --build
 
+### Referência de Coordenadas
+Para obter coordenadas de teste, você pode utilizar:[LatLong.net Converter](https://www.latlong.net/convert-address-to-lat-long.html)
