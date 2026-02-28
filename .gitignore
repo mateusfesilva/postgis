@@ -1,0 +1,11 @@
+# Cache
+__pycache__/
+.venv/
+venv/
+
+# Variáveis de ambiente
+.env
+
+# Volumes do DB
+pgdata/
+data/
