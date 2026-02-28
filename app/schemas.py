@@ -1,23 +1,23 @@
 from pydantic import BaseModel
 
 # Validação do payload de criação de ponto
-class CriarPonto(BaseModel):
-    nome: str
-    descricao: str
-    latitude: float
-    longitude: float
+class CreatePoint(BaseModel):
+    name: str
+    description: str
+    lat: float
+    lon: float
 
 # Validação do response do servidor
-class PontoResponse(BaseModel):
+class PointResponse(BaseModel):
     id: int
-    descricao: str
-    latitude: float
-    longitude: float
+    description: str
+    lat: float
+    lon: float
 
-class CriarPoligono(BaseModel):
-    nome: str
-    descricao: str
-    coordenadas: list
+class CreatePolygon(BaseModel):
+    name: str
+    description: str
+    coords: list
 
 class Config:
     # Com essa config o pydantic consegue ler os campos no formato de um atributo ao invés de um objeto python

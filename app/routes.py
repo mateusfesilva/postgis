@@ -8,43 +8,43 @@ from .database import get_db
 router = APIRouter()
 
 # Organiza os paths dos endpoints (e agrupa no swagger)
-@router.post("/pontos/", response_model=schemas.PontoResponse)
-def create_ponto(ponto: schemas.CriarPonto, db: Session = Depends(get_db)):
+@router.post("/points/", response_model=schemas.PointResponse)
+def create_point(point: schemas.CreatePoint, db: Session = Depends(get_db)):
     # lat/len para WKT
-    wkt_element = f"POINT({ponto.longitude} {ponto.latitude})"
+    wkt_element = f"POINT({point.lon} {point.lat})"
 
-    db_ponto = models.GeometriaPonto(
-        nome=ponto.nome,
-        descricao=ponto.descricao,
+    db_point = models.PointGeometry(
+        name=point.name,
+        description=point.description,
         geom=wkt_element
     )
-    db.add(db_ponto)
+    db.add(db_point)
     db.commit()
-    db.refresh(db_ponto)
+    db.refresh(db_point)
 
     # Geom para lat/lon
-    shp = to_shape(db_ponto.geom)
-    return schemas.PontoResponse(
-        id=db_ponto.id,
-        nome=db_ponto.nome,
-        descricao=db_ponto.descricao,
-        latitude=shp.y,
-        longitude=shp.x
+    shp = to_shape(db_point.geom)
+    return schemas.PointResponse(
+        id=db_point.id,
+        name=db_point.name,
+        description=db_point.description,
+        lat=shp.y,
+        lon=shp.x
     )
 
 
-@router.get("/pontos/", response_model=List[schemas.PontoResponse])
+@router.get("/points/", response_model=List[schemas.PointResponse])
 def read_points(db: Session = Depends(get_db)):
-    pontos = db.query(models.GeometriaPonto).all()
+    points = db.query(models.PointGeometry).all()
     results = []
-    for p in pontos:
+    for p in points:
         shp = to_shape(p.geom)
-        results.append(schemas.PontoResponse(
+        results.append(schemas.PointResponse(
             id=p.id,
-            nome=p.nome,
-            descricao=p.descricao,
-            latitude=shp.y,
-            longitude=shp.x
+            name=p.name,
+            description=p.description,
+            lat=shp.y,
+            lon=shp.x
         ))
     return results
 
