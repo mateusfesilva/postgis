@@ -7,13 +7,13 @@
 <a name="english"></a>
 ## 🇺🇸 English
 
-This is a REST API for vector data management, developed to demonstrate the integration between **Python (FastAPI)** and spatial databases (**PostGIS**).
+This is a REST API for vector data management in progress, developed to demonstrate the integration between **Python (FastAPI)** and spatial databases (**PostGIS**).
 
 ### Technologies
-* **FastAPI**: Modern, high-performance web framework.
-* **PostGIS**: Spatial database extender for PostgreSQL.
-* **SQLAlchemy & GeoAlchemy2**: ORM for spatial data manipulation.
-* **Docker & Docker Compose**: Container orchestration for isolated environments.
+* **FastAPI**
+* **PostGIS**
+* **SQLAlchemy & GeoAlchemy2**
+* **Docker & Docker Compose**
 
 ### How to Run
 1. Clone the repository: `git clone ...`
@@ -27,8 +27,6 @@ This is a REST API for vector data management, developed to demonstrate the inte
 
 ## Coordinates Reference
 To get coordinates for testing, you can use: [LatLong.net Converter](https://www.latlong.net/convert-address-to-lat-long.html)
-
-
 
 <a name="português"></a>
 ## 🇧🇷 Português
