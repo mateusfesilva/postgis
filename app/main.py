@@ -8,8 +8,10 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="GeoAPI")
 
+
 @app.get("/")
 def root():
-    return {"message": "GeoAPI online" }
+    return {"message": "GeoAPI online"}
+
 
 app.include_router(router)

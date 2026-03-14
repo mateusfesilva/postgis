@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String
 from geoalchemy2 import Geometry
 from .database import Base
 
+
 class PointGeometry(Base):
     __tablename__ = "pontos_interesse"
 

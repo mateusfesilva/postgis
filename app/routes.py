@@ -7,6 +7,7 @@ from .database import get_db
 
 router = APIRouter()
 
+
 # Organiza os paths dos endpoints (e agrupa no swagger)
 @router.post("/points/", response_model=schemas.PointResponse)
 def create_point(point: schemas.CreatePoint, db: Session = Depends(get_db)):
@@ -14,9 +15,7 @@ def create_point(point: schemas.CreatePoint, db: Session = Depends(get_db)):
     wkt_element = f"POINT({point.lon} {point.lat})"
 
     db_point = models.PointGeometry(
-        name=point.name,
-        description=point.description,
-        geom=wkt_element
+        name=point.name, description=point.description, geom=wkt_element
     )
     db.add(db_point)
     db.commit()
@@ -29,7 +28,7 @@ def create_point(point: schemas.CreatePoint, db: Session = Depends(get_db)):
         name=db_point.name,
         description=db_point.description,
         lat=shp.y,
-        lon=shp.x
+        lon=shp.x,
     )
 
 
@@ -39,14 +38,13 @@ def read_points(db: Session = Depends(get_db)):
     results = []
     for p in points:
         shp = to_shape(p.geom)
-        results.append(schemas.PointResponse(
-            id=p.id,
-            name=p.name,
-            description=p.description,
-            lat=shp.y,
-            lon=shp.x
-        ))
+        results.append(
+            schemas.PointResponse(
+                id=p.id, name=p.name, description=p.description, lat=shp.y, lon=shp.x
+            )
+        )
     return results
+
 
 @router.get("/health")
 def check_health():
