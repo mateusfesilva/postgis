@@ -1,4 +1,4 @@
-<img width="797" height="613" alt="image" src="https://github.com/user-attachments/assets/17feb43d-6a51-4cd7-9281-9d2ac7c5af62" /># WebGIS Backend - FastAPI & PostGIS
+# WebGIS Backend - FastAPI & PostGIS
 
 [🇺🇸 English](#english) | [🇧🇷 Português](#português)
 
@@ -23,10 +23,10 @@ This is a REST API for vector data management in progress, developed to demonstr
    docker compose up -d --build
 
 ### OpenAPI Documentation
-![Swagger Documentation](./frontend/src/assets/SwaggerUI.png)
+![Swagger](./assets/SwaggerUI.png)
 
 ### Web Page
-![Page]('./frontend/src/assets/pagina.png')
+![Page](./assets/pagina.png)
 
 ## Coordinates Reference
 To get coordinates for testing, you can use: [LatLong.net Converter](https://www.latlong.net/convert-address-to-lat-long.html)
