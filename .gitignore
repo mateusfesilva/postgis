@@ -9,3 +9,6 @@ venv/
 # Volumes do DB
 pgdata/
 data/
+
+# testes
+test.py
