@@ -36,7 +36,7 @@ To get coordinates for testing, you can use: [LatLong.net Converter](https://www
 <a name="português"></a>
 ## 🇧🇷 Português
 
-Este projeto é uma API REST em andamento para gerenciamento de dados vetoriais, desenvolvida para demonstrar a integração entre **Python (FastAPI)** e bancos de dados espaciais (**PostGIS**). Atualmente, somente geometria de pontos são suportadas.
+Este projeto é uma API REST em andamento para gerenciamento de dados vetoriais, desenvolvida para demonstrar a integração entre **Python (FastAPI)** e bancos de dados espaciais (**PostGIS**).
 
 ### Tecnologias Utilizadas
 * **FastAPI**
