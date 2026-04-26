@@ -1,4 +1,4 @@
-# WebGIS Backend - FastAPI & PostGIS
+# WebGIS Backend - FastAPI, PostGIS & React
 
 [🇺🇸 English](#english) | [🇧🇷 Português](#português)
 
@@ -12,6 +12,8 @@ This is a REST API for vector data management in progress, developed to demonstr
 ### Technologies
 * **FastAPI**
 * **PostGIS**
+* **React**
+* **Vite**
 * **SQLAlchemy & GeoAlchemy2**
 * **Docker & Docker Compose**
 
@@ -39,6 +41,8 @@ Este projeto é uma API REST em andamento para gerenciamento de dados vetoriais,
 ### Tecnologias Utilizadas
 * **FastAPI**
 * **PostGIS**
+* **React**
+* **Vite**
 * **SQLAlchemy & GeoAlchemy2**
 * **Docker & Docker Compose**
 
